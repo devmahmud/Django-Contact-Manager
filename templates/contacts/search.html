@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+ <!-- Main Section -->
+    <div class="container">
+      <h3 class="heading font-weight-light my-2 text-muted">Search results for "{{ request.GET.q }}"</h3>
+      <hr />
+    </div>
+
+    <div class="container main-part">
+      {% if contacts %}
+        {% for contact in contacts %}
+          {% include 'partials/_card.html' with contact=contact %}
+        {% endfor %}
+        {% else %}
+          <p class="d-block font-weight-light my-2 text-danger lead">No search results !</p>
+      {% endif %}
+    </div>
+    <!-- Main Section ends-->
+{% endblock maincontent %}

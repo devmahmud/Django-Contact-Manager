@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Create New Contact{% endblock title %}
+
+{% block maincontent %}
+<div class="container">
+    <h2 class="heading font-weight-light text-center my-2">Create a New Contact</h2>
+    <hr>
+</div>
+<div class="container w-50 card p-4 mt-4">
+    <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <input type="submit" class="btn btn-info btn-block text-white text-center my-2" value="Create">
+    </form>
+</div>
+{% endblock maincontent %}
