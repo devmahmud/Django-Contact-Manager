@@ -31,13 +31,13 @@ python manage.py migrate
 python manage.py collectstatic
 ```
 # Creating Superuser
-To create superuser open terminal and type
 ```
+To create superuser open terminal and type
 python manage.py createsuperuser
 ```
 
-```
 # To run the program in local server use the following command
+
 ```
 python manage.py runserver
 ```
@@ -62,7 +62,5 @@ Email: expelmahmud@gmail.com
 </blockquote>
 
 ========Thank You !!!=========
-
-
 
 
